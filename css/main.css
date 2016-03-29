@@ -1,0 +1,66 @@
+/* header */
+#bg {
+  background-image: linear-gradient(90deg, #FFFFFF 30%, #95FFF7 100%);
+}
+
+#logoArea {
+  background-color: transparent;
+  display: flex;
+  width: 100%;
+  height: 10%;
+  padding-top: 32px;
+  padding-left: 8px;
+  padding-bottom: 40px
+}
+
+#logo {
+  width: 100px;
+  height: 110px;  
+}
+
+#logoTitle {
+  flex: 5;
+  font-size: 200%;
+  text-align: left;
+  color: #4A8731;
+  padding-top: 42px; 
+}
+
+#titleRight {
+  flex: 5;
+  text-align: right;
+  padding-right: 16px;
+}
+
+#date {
+  padding-top: 36px; 
+  font-size: 22px;
+  color: #000000;
+}
+
+#userState {
+  padding-top: 20px;
+}
+
+/* main */
+#main {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+}
+
+#aside {
+  flex: 1;
+  border-style: solid;
+  margin: 10px;
+  background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
+}
+
+#mainRender {
+  flex: 3;
+  border-style: solid;
+  margin: 10px;
+  background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
+}
