@@ -48,7 +48,7 @@
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-
+  height: 600px;
 }
 
 #aside {
