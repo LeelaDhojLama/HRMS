@@ -22,3 +22,5 @@ demo at http://localhost:8080
 npm start
 ```
 
+##Reference
+build environment: http://eddychang.me/javascript/233-setup-react-develop-env.html
