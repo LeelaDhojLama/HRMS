@@ -1,22 +1,42 @@
+var path = require('path');
+var webpack = require('webpack');
+
 module.exports = {
-  context: __dirname + "/src",
-  entry: "./main.js",
+
+  devtool: 'eval',
+
+  entry: {
+    javascript: [
+      './src/index'
+    ],
+    html: './index.html'
+  },
 
   output: {
-    filename: "main.js",
-    path: __dirname + "/dist",
+    path: path.join(__dirname, 'dist'),
+    filename: 'bundle.js'
   },
-  loaders: [
-        {
-          test: /\.jsx?$/,
 
-          include: [
-            __dirname + "/src"
-          ],
+  plugins: [
+    new webpack.NoErrorsPlugin()
+  ],
 
-          exclude: /node_modules/,
+  resolve: {
+    extensions: ['', '.js']
+  },
 
-          loader: 'babel'
-        }
+  module: {
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loaders: ['react-hot', 'babel'],
+      },
+      {
+        test: /\.html$/,
+        loader: "file-loader?name=[name].[ext]",
+      }
     ]
-}
+  }
+
+};
