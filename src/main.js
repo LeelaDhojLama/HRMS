@@ -3,14 +3,14 @@ var ReactDOM = require('react-dom');
 var MainComment = React.createClass({
   render: function() {
     return (
-      React.createElement('div', {id: "commentBox"},
-        "Hello, world!!!!"
-      )
+      <div className="commentBox">
+        Hello, world!
+      </div>
     );
   }
 });
 ReactDOM.render(
-  React.createElement(MainComment, null),
+  <MainComment/>,
   document.getElementById('mainRender')
 );
 
