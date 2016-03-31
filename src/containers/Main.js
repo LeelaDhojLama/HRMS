@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
+import DateTime from './dateTime.js';
+import UserState from './userState.js';
+import AsideButton from './asideButton.js';
+import MainRender from './mainRender.js';
 
-export default class Main extends Component {
+
+export default class Main extends React.Component {
 
   render() {
     return (
@@ -9,16 +14,20 @@ export default class Main extends Component {
       <img id="logo" src="./logo.jpg" alt="logo"/>
       <span id="logoTitle">正法寶藏工作室</span>
       <span id="titleRight">
-        <div id="date">2016</div>
-        <div id="userState">Xder, Hello!</div>
+        <div id="date">
+          <DateTime/>
+        </div>
+        <div id="userState">
+          <UserState/>
+        </div>
         </span>
       </header>
       <div id="main">
       <aside id="aside">
-        zxc
+        <AsideButton/>
       </aside>
       <div id="mainRender">
-        asd
+        <MainRender/>
       </div>
       </div>
       </body>
