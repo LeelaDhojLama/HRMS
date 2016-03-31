@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class AsideButton extends React.Component {
+export default class AsideButton extends Component {
   
 
   render() {

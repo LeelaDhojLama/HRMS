@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class MainRender extends React.Component {
+export default class MainRender extends Component {
   
 
   render() {

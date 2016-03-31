@@ -5,29 +5,29 @@ import AsideButton from './asideButton.js';
 import MainRender from './mainRender.js';
 
 
-export default class Main extends React.Component {
+export default class Main extends Component {
 
   render() {
     return (
       <body id="bg">
       <header id="logoArea">
-      <img id="logo" src="./logo.jpg" alt="logo"/>
+      <img id="logo" src="./logo.jpg" alt="logo" />
       <span id="logoTitle">正法寶藏工作室</span>
       <span id="titleRight">
         <div id="date">
-          <DateTime/>
+          <DateTime />
         </div>
         <div id="userState">
-          <UserState/>
+          <UserState />
         </div>
         </span>
       </header>
       <div id="main">
       <aside id="aside">
-        <AsideButton/>
+        <AsideButton />
       </aside>
       <div id="mainRender">
-        <MainRender/>
+        <MainRender />
       </div>
       </div>
       </body>

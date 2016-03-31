@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export default class UserState extends React.Component {
+export default class UserState extends Component {
   
 
   render() {
