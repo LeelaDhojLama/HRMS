@@ -6,10 +6,9 @@ import MainRender from './mainRender.js';
 
 
 export default class Main extends Component {
-
   render() {
     return (
-      <body id="bg">
+      <div>
       <header id="logoArea">
       <img id="logo" src="./logo.jpg" alt="logo" />
       <span id="logoTitle">正法寶藏工作室</span>
@@ -30,7 +29,7 @@ export default class Main extends Component {
         <MainRender />
       </div>
       </div>
-      </body>
+      </div>
     );
   }
 }
