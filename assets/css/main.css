@@ -48,7 +48,7 @@
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
-  height: 600px;
+  height: 700px;
 }
 
 #aside {
@@ -74,7 +74,6 @@
   margin-left: -125px
 }
 
-
 #mainRender {
   flex: 3;
   border-style: solid;
@@ -82,7 +81,15 @@
   background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
 }
 
+#homeTitle {
+  font-size: 80px;
+  text-align: center;
+  padding-top: 240px;
+  letter-spacing: 30px;
+  padding-left: 30px;
+}
+
 #my-signin2 {
-  padding: 300px 0px 100px 50%;
+  padding: 40px 0px 100px 50%;
   margin-left: -150px;
 }

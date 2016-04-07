@@ -27,6 +27,7 @@ export default class GoogleLogin extends Component {
   render() {
     return (
       <span>
+      <div id="homeTitle">差勤系統</div>
       <div id="my-signin2" />
       </span>
     );
