@@ -56,11 +56,33 @@
   border-style: solid;
   margin: 10px;
   background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
+  
 }
+
+#asidebutton {
+  padding: 20px 0% 100px 50%;
+}
+
+.asidebtn {
+  background-image: linear-gradient(-146deg, #E3F5FF 0%, #428BCA 0%);
+  border: 1px solid #357EBD;
+  border-color: #2e6da4;
+  font-size: 24px;
+  color: #FFFFFF;
+  width: 250px;
+  height: 46px;
+  margin-left: -125px
+}
+
 
 #mainRender {
   flex: 3;
   border-style: solid;
   margin: 10px;
   background-image: radial-gradient(40% 98%, #C7F0F2 0%, #81D7DB 100%);
+}
+
+#my-signin2 {
+  padding: 300px 0px 100px 50%;
+  margin-left: -150px;
 }

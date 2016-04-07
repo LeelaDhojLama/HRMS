@@ -27,7 +27,7 @@ export default class DateTime extends Component {
       date: date,
       day: day,
       time: time
-    })
+    });
   }
 
   componentWillMount() {
@@ -35,7 +35,7 @@ export default class DateTime extends Component {
   }
 
   componentDidMount() {
-    window.setInterval(function () {
+    window.setInterval(function() {
       this.setDateTime();
     }.bind(this), 1000);
   }
