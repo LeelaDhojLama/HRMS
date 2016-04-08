@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 export default class GoogleLogin extends Component {
-  onSignIn(googleUser) {
+  signIn(googleUser) {
     let arr = [];
     let profile = googleUser.getBasicProfile();
     let idToken = googleUser.getAuthResponse()['id_token'];
@@ -20,7 +20,7 @@ export default class GoogleLogin extends Component {
       'height': 50,
       'longtitle': true,
       'theme': 'dark',
-      'onsuccess': this. onSignIn
+      'onsuccess': this.signIn
     });  
   }
 
