@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import store from '../store/index.js'
+import {Provider} from 'react-redux';
 import DateTime from './dateTime.js';
 import UserState from './userState.js';
 import AsideButton from './asideButton.js';
@@ -17,9 +19,11 @@ export default class Main extends Component {
           <DateTime />
         </div>
         <div id="userState">
+          <Provider store={store}>
           <UserState />
+          </Provider>
         </div>
-        </span>
+      </span>
       </header>
       <div id="main">
       <aside id="aside">

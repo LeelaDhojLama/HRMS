@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import store from '../store/index.js';
+import actions from '../actions/action.js';
 
 export default class UserState extends Component {
   constructor() {
@@ -13,6 +15,9 @@ export default class UserState extends Component {
   signOut() {
     let auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut();
+    console.log(store);
+    console.log(actions.signOut);
+    actions.signOut();
     console.log('User signed out.');
   }
 

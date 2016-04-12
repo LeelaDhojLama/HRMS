@@ -1,10 +1,13 @@
 import React, {Component} from 'react';
+import actions from '../actions/action.js';
 
 export default class GoogleLogin extends Component {
   signIn(googleUser) {
     let arr = [];
     let profile = googleUser.getBasicProfile();
     let idToken = googleUser.getAuthResponse()['id_token'];
+    console.log(actions.signIn);
+    actions.signIn(profile.getName());
     arr.push('ID: ' + profile.getId());
     arr.push('Name: ' + profile.getName());
     arr.push('Image URL: ' + profile.getImageUrl());
