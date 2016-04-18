@@ -1,19 +1,20 @@
 import React, {Component} from 'react';
-import actions from '../actions/action.js';
+import {signIn} from '../actions/action.js';
+import store from '../store/index.js';
 
 export default class GoogleLogin extends Component {
   signIn(googleUser) {
     let arr = [];
     let profile = googleUser.getBasicProfile();
     let idToken = googleUser.getAuthResponse()['id_token'];
-    console.log(actions.signIn);
-    actions.signIn(profile.getName());
+    store.dispatch(signIn(profile.getName()));
+    console.log(store.getState());
     arr.push('ID: ' + profile.getId());
     arr.push('Name: ' + profile.getName());
     arr.push('Image URL: ' + profile.getImageUrl());
     arr.push('Email: ' + profile.getEmail());
     arr.push('ID Token: ' + idToken);
-    console.log(arr.join('\n'));
+//    console.log(arr.join('\n'));
   }
 
   componentDidMount() {

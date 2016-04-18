@@ -19,15 +19,13 @@ export default class Main extends Component {
           <DateTime />
         </div>
         <div id="userState">
-          <Provider store={store}>
           <UserState />
-          </Provider>
         </div>
       </span>
       </header>
       <div id="main">
       <aside id="aside">
-        btn
+        <AsideButton />
       </aside>
       <div id="mainRender">
         <div id="abc"></div>
