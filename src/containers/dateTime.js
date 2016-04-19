@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 
 export default class DateTime extends Component {
+  constructor() {
+    super();
+    this.state = {
+      weekday: ['(日)', '(一)', '(二)', '(三)', '(四)', '(五)', '(六)']
+    }
+  }
+
   setDateTime() {
     let now = new Date();
-    let weekday = [
-      '(日)',
-      '(一)',
-      '(二)',
-      '(三)',
-      '(四)',
-      '(五)',
-      '(六)'
-    ];
+    
     let date = [
       now.getFullYear(), 
       now.getMonth() + 1, 
@@ -22,7 +21,7 @@ export default class DateTime extends Component {
       ('0' + now.getMinutes()).substr(now.getMinutes().toString().length - 1, 2),
       ('0' + now.getSeconds()).substr(now.getSeconds().toString().length - 1, 2)
     ].join(':');
-    let day = weekday[now.getDay()];
+    let day = this.state.weekday[now.getDay()];
     this.setState({
       date: date,
       day: day,

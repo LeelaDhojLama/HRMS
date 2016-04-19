@@ -1,8 +1,15 @@
-require('babel-polyfill');
-require('./index.css');
-require('./../assets/img/logo.jpg');
+import 'babel-polyfill';
+import './index.css';
+import './../assets/img/logo.jpg';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {render} from 'react-dom';
+import store from './store/index.js';
+import { Provider } from 'react-redux';
 import Main from './containers/Main';
 
-ReactDOM.render(<Main />, document.getElementById('root'));
+render(
+  <Provider store={store}>
+    <Main />
+  </Provider>,
+  document.getElementById('root')
+)
