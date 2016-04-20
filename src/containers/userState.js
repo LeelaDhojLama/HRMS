@@ -8,7 +8,6 @@ const onSignOut = () => {
   auth2.signOut();
   store.dispatch(signOut())
   console.log(store.getState());
-  console.log('User signed out.');
 }
 
 const renderState = (state) => {
@@ -16,7 +15,7 @@ const renderState = (state) => {
   if(state.signState.sign) {
     signOutbtn = <button id="signOutbtn" href="#" onClick={() => {onSignOut()}}>Sign out</button>;
   } else {
-    signOutbtn = '';
+    signOutbtn = ' ';
   }
   return (
   <span id="userState">

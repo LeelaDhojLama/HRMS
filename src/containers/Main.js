@@ -24,9 +24,7 @@ export default class Main extends Component {
       </span>
       </header>
       <div id="main">
-      <aside id="aside">
         <AsideButton />
-      </aside>
       <div id="mainRender">
         <div id="abc"></div>
         <MainRender />
