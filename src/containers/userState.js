@@ -1,35 +1,40 @@
-import React, {Component} from 'react';
-import {signOut} from '../actions/action.js';
+import React from 'react';
 import {connect} from 'react-redux';
 import store from '../store/index.js';
-import GoogleSignState from './googleSignState';
+import {signOut} from '../actions/action.js';
 
-export default class UserState extends Component {
-  constructor() {
-    super();
-    this.state = {
-      signOutbtn: <button id="signOutbtn" href="#" onClick={this.signOut.bind(this)} onclick={() => {this.signOut()}}>Sign out</button>
-    };
+const onSignOut = () => {
+  let auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut();
+  store.dispatch(signOut())
+  console.log(store.getState());
+  console.log('User signed out.');
+}
+
+const renderState = (state) => {
+  let signOutbtn;
+  if(state.signState.sign) {
+    signOutbtn = <button id="signOutbtn" href="#" onClick={() => {onSignOut()}}>Sign out</button>;
+  } else {
+    signOutbtn = '';
   }
+  return (
+  <span id="userState">
+  <div id="state">{state.signState.userName}, Hello</div>
+  {signOutbtn}
+  </span>
+  )
+}
 
-
-  signOut() {
-    let auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut();
-    store.dispatch(signOut())
-    console.log(store.getState());
-    console.log('User signed out.');
-  }
-
-  render() {
-    return (
-      <span id="userState">
-      <div id="state" value><GoogleSignState />, Hello</div>
-      {this.state.signOutbtn}
-      </span>
-    );
+const mapStateToProps = (state) => {
+  return {
+    signState: state
   }
 }
+
+const UserState = connect(mapStateToProps)(renderState)
+
+export default UserState
 
 
 
