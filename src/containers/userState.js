@@ -15,7 +15,7 @@ const renderState = (state) => {
   if(state.signState.sign) {
     signOutbtn = <button id="signOutbtn" href="#" onClick={() => {onSignOut()}}>Sign out</button>;
   } else {
-    signOutbtn = ' ';
+    signOutbtn = '';
   }
   return (
   <span id="userState">

@@ -9,11 +9,11 @@ export default class GoogleLogin extends Component {
     let idToken = googleUser.getAuthResponse()['id_token'];
     store.dispatch(signIn(profile.getName()));
     console.log(store.getState());
-    arr.push('ID: ' + profile.getId());
-    arr.push('Name: ' + profile.getName());
-    arr.push('Image URL: ' + profile.getImageUrl());
-    arr.push('Email: ' + profile.getEmail());
-    arr.push('ID Token: ' + idToken);
+//    arr.push('ID: ' + profile.getId());
+//    arr.push('Name: ' + profile.getName());
+//    arr.push('Image URL: ' + profile.getImageUrl());
+//    arr.push('Email: ' + profile.getEmail());
+//    arr.push('ID Token: ' + idToken);
 //    console.log(arr.join('\n'));
   }
 
