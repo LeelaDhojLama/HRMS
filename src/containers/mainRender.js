@@ -11,11 +11,7 @@ export default class MainRender extends Component {
       <div>
       <GoogleLogin />
       <ClockInOut />
-      <Leave />
-      <OverTime />
-      <StaReport />
       </div>
     );
   }
-
 }

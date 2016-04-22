@@ -8,7 +8,7 @@ export default class GoogleLogin extends Component {
     let profile = googleUser.getBasicProfile();
     let idToken = googleUser.getAuthResponse()['id_token'];
     store.dispatch(signIn(profile.getName()));
-    console.log(store.getState());
+    console.log(store.getState().sign);
 //    arr.push('ID: ' + profile.getId());
 //    arr.push('Name: ' + profile.getName());
 //    arr.push('Image URL: ' + profile.getImageUrl());

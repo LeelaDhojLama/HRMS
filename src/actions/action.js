@@ -2,7 +2,6 @@ export function signIn(userName) {
   return {
     type: 'ONSIGNIN',
     userName: userName,
-    sign: true
   };
 }
 
@@ -10,6 +9,29 @@ export function signOut() {
   return {
     type: 'ONSIGNOUT',
     userName: '',
-    sign: false
   };
+}
+
+export function onClockInOut() {
+  return {
+    type: 'ONCLOCKINOUT'
+  }
+}
+
+export function onLeave() {
+  return {
+    type: 'ONLEAVE',
+  }
+}
+
+export function onOverTime() {
+  return {
+    type: 'ONOVERTIME',
+  }
+}
+
+export function onStaReport() {
+  return {
+    type: 'ONSTAREPORT',
+  }
 }

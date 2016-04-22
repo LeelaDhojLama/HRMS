@@ -7,19 +7,20 @@ const onSignOut = () => {
   let auth2 = gapi.auth2.getAuthInstance();
   auth2.signOut();
   store.dispatch(signOut())
-  console.log(store.getState());
+  console.log(store.getState().sign);
 }
 
 const renderState = (state) => {
+  console.log(state)
   let signOutbtn;
-  if(state.signState.sign) {
+  if(state.signState.sign.sign) {
     signOutbtn = <button id="signOutbtn" href="#" onClick={() => {onSignOut()}}>Sign out</button>;
   } else {
     signOutbtn = '';
   }
   return (
   <span id="userState">
-  <div id="state">{state.signState.userName}, Hello</div>
+  <div id="state">{state.signState.sign.userName}, Hello</div>
   {signOutbtn}
   </span>
   )
